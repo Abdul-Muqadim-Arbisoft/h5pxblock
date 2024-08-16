@@ -30,8 +30,7 @@ jobs:
           python -m venv .venv
       - name: activate venv
         run: | 
-          .venv/bin/activate
-          deactivate
+          source .venv/bin/activate
 
       - name: install dependencies of xblock-sdk
         working-directory: xblock-sdk
