@@ -38,9 +38,9 @@ jobs:
         working-directory: xblock-sdk
         run: |
           which python3
-          python3 -m pip install xblock-utils==4.0.0
-          python3 -m pip install -qr requirements/dev.txt
-          python3 -m pip install -qr requirements/local.txt
+          . .venv/bin/python3 -m pip install xblock-utils==4.0.0
+          . .venv/bin/python3 -m pip install -qr requirements/dev.txt
+          . .venv/bin/python3 -m pip install -qr requirements/local.txt
       
       # - name: Deactivate virtual environment
       #   run: deactivate
