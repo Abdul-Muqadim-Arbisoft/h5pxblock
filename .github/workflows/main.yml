@@ -30,12 +30,15 @@ jobs:
         run: |
             python -m venv .venv
             ls -l .venv/bin
-      - name: Install dependencies of xblock-sdk
-        working-directory: xblock-sdk
-        run: |
-          .venv/bin/python -m pip install xblock-utils==4.0.0
-          .venv/bin/python -m pip install -qr requirements/dev.txt
-          .venv/bin/python -m pip install -qr requirements/local.txt
+            .venv/bin/python -m pip install xblock-utils==4.0.0
+            .venv/bin/python -m pip install -qr requirements/dev.txt
+            .venv/bin/python -m pip install -qr requirements/local.txt
+      # - name: Install dependencies of xblock-sdk
+      #   working-directory: xblock-sdk
+      #   run: |
+      #     .venv/bin/python -m pip install xblock-utils==4.0.0
+      #     .venv/bin/python -m pip install -qr requirements/dev.txt
+      #     .venv/bin/python -m pip install -qr requirements/local.txt
 
       - name: Setup h5p xblock
         run: .venv/bin/python -m pip install .
