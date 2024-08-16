@@ -31,7 +31,7 @@ jobs:
       - name: activate venv
         run: |
           which python3 
-          .venv/bin/activate
+          . .venv/bin/activate
           which python3
           
       - name: install dependencies of xblock-sdk
