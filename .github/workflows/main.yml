@@ -27,8 +27,9 @@ jobs:
           python-version: '3.12'
 
       - name: Setup python virtual env
-        run: python -m venv .venv
-
+        run: |
+            python -m venv .venv
+            ls -l .venv/bin
       - name: Install dependencies of xblock-sdk
         working-directory: xblock-sdk
         run: |
